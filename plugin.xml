@@ -5,7 +5,8 @@
    <extension
          id="application"
          point="org.eclipse.core.runtime.applications">
-      <application>
+      <application
+            visible="false">
          <run
                class="dann.learn.first.Application">
          </run>
@@ -16,14 +17,14 @@
       <perspective
             name="RCP Perspective"
             class="dann.learn.first.Perspective"
-            id="de.vogella.rcp.intro.first.perspective">
+            id="dann.learn.first.perspective">
       </perspective>
    </extension>
    <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            application="de.vogella.rcp.intro.first.application"
+            application="dann.learn.first.application"
             name="Hello RCP">
          <property
                name="windowImages"
