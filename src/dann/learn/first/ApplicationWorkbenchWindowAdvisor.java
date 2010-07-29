@@ -24,7 +24,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 	private IWorkbenchWindow window;
 	private TrayItem trayItem;
 	private Image trayImage;
-	private final static String COMMAND_ID = "dann.learn.first.commands.Exit";
+	private final static String COMMAND_ID = Activator.PLUGIN_ID + ".commands.Exit";
 
     public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
         super(configurer);
@@ -59,7 +59,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		final Tray tray = window.getShell().getDisplay().getSystemTray();
 		TrayItem trayItem = new TrayItem(tray, SWT.NONE);
 		trayImage = AbstractUIPlugin.imageDescriptorFromPlugin(
-				"dann.learn.first", "/icons/alt_about.gif").createImage();
+				Activator.PLUGIN_ID, "/icons/alt_about.gif").createImage();
 		trayItem.setImage(trayImage);
 		trayItem.setToolTipText("Tray Item");
 		return trayItem;
