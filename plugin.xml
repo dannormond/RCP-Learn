@@ -6,7 +6,7 @@
          id="application"
          point="org.eclipse.core.runtime.applications">
       <application
-            visible="false">
+            visible="true">
          <run
                class="dann.learn.first.Application">
          </run>
