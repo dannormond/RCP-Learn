@@ -57,5 +57,30 @@
          </menu>
       </menuContribution>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="dann.learn.first.views.MyView"
+            id="dann.learn.first.views.MyView"
+            name="My View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               closeable="false"
+               id="dann.learn.first.views.MyView"
+               minimized="false"
+               moveable="true"
+               ratio="0.95f"
+               relationship="top"
+               relative="org.eclipse.ui.editorss"
+               showTitle="false">
+         </view>
+      </perspectiveExtension>
+   </extension>
 
 </plugin>
